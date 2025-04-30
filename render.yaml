@@ -1,0 +1,13 @@
+services:
+- type: web
+  name: pryMongoEsp32
+  runtime: python
+  repo: https://github.com/JohannVC834/pryMongoEsp32.git
+  plan: free
+  envVars:
+  - key: MONGO_URI
+    value: mongodb+srv:mongodb+srv://johann12032005:J3WdPR0CwILo9Gpf@cluster0.rc46fht.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python app.py
+version: "1"
